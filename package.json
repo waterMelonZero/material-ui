@@ -184,7 +184,7 @@
     "stylis-plugin-rtl-sc": "npm:stylis-plugin-rtl@^1.1.0",
     "terser-webpack-plugin": "^5.3.3",
     "tslint": "5.14.0",
-    "typescript": "^4.6.4",
+    "typescript": "^4.7.3",
     "unist-util-visit": "^2.0.3",
     "util": "^0.12.4",
     "webpack": "^5.73.0",
