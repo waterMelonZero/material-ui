@@ -204,10 +204,11 @@ export default function JoyUsageDemo<T extends {} = {}>({
               );
             }
             if (knob === 'radio') {
+              const label = `${componentName}-${String(propName)}`;
               return (
                 <Box key={propName as string}>
                   <Typography
-                    id={`${componentName}-${propName}`}
+                    id={label}
                     fontSize="xs"
                     fontWeight="md"
                     sx={{ mb: 0.5 }}
@@ -216,8 +217,8 @@ export default function JoyUsageDemo<T extends {} = {}>({
                   </Typography>
                   <RadioGroup
                     row
-                    name={`${componentName}-${propName}`}
-                    aria-labelledby={`${componentName}-${propName}`}
+                    name={label}
+                    aria-labelledby={label}
                     value={resolvedValue}
                     onChange={(event) =>
                       setProps((latestProps) => ({
@@ -326,6 +327,7 @@ export default function JoyUsageDemo<T extends {} = {}>({
               );
             }
             if (knob === 'select') {
+              const label = `${componentName}-${String(propName)}`;
               return (
                 <Box key={propName as string}>
                   <Typography
@@ -333,12 +335,12 @@ export default function JoyUsageDemo<T extends {} = {}>({
                     fontSize="xs"
                     fontWeight="lg"
                     mb={1}
-                    htmlFor={`${componentName}-${propName}`}
+                    htmlFor={label}
                   >
                     {propName}
                   </Typography>
                   <Select
-                    id={`${componentName}-${propName}`}
+                    id={label}
                     value={resolvedValue as string}
                     onChange={(event) =>
                       setProps((latestProps) => ({
