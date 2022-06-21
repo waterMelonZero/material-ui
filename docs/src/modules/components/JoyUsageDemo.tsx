@@ -207,12 +207,7 @@ export default function JoyUsageDemo<T extends {} = {}>({
               const label = `${componentName}-${String(propName)}`;
               return (
                 <Box key={propName as string}>
-                  <Typography
-                    id={label}
-                    fontSize="xs"
-                    fontWeight="md"
-                    sx={{ mb: 0.5 }}
-                  >
+                  <Typography id={label} fontSize="xs" fontWeight="md" sx={{ mb: 0.5 }}>
                     {propName}
                   </Typography>
                   <RadioGroup
