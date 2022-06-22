@@ -189,7 +189,7 @@ export default function JoyUsageDemo<T extends {} = {}>({
                       [propName]: event.target.checked,
                     }))
                   }
-                  endDecorator={propName}
+                  endDecorator={propName as string}
                   size="sm"
                   sx={{
                     alignSelf: 'flex-start',
@@ -208,7 +208,7 @@ export default function JoyUsageDemo<T extends {} = {}>({
               return (
                 <Box key={propName as string}>
                   <Typography id={label} fontSize="xs" fontWeight="md" sx={{ mb: 0.5 }}>
-                    {propName}
+                    {propName as string}
                   </Typography>
                   <RadioGroup
                     row
@@ -332,7 +332,7 @@ export default function JoyUsageDemo<T extends {} = {}>({
                     mb={1}
                     htmlFor={label}
                   >
-                    {propName}
+                    {propName as string}
                   </Typography>
                   <Select
                     id={label}
@@ -357,7 +357,7 @@ export default function JoyUsageDemo<T extends {} = {}>({
               return (
                 <TextField
                   key={propName as string}
-                  label={propName}
+                  label={propName as string}
                   size="sm"
                   value={resolvedValue || ''}
                   onChange={(event) =>
